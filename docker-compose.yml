@@ -1,14 +1,14 @@
 web:
   image: 'gitlab/gitlab-ce:latest'
   restart: always
-  hostname: 'gitlab.example.com'
+  hostname: 'edrox.net'
   environment:
     GITLAB_OMNIBUS_CONFIG: |
       external_url 'http://edrox.net'
   ports:
-    - '80:9080'
-    - '443:9443'
-    - '22:9022'
+    - '9080:80'
+    - '9443:443'
+    - '9022:22'
   volumes:
     - '/mnt/cache/appdata/gitlab-ce/config:/etc/gitlab'
     - '/mnt/cache/appdata/gitlab-ce/data:/var/log/gitlab'
