@@ -4,12 +4,12 @@ web:
   hostname: 'gitlab.example.com'
   environment:
     GITLAB_OMNIBUS_CONFIG: |
-      external_url 'https://gitlab.example.com'
+      external_url 'http://edrox.net'
   ports:
-    - '80:80'
-    - '443:443'
-    - '22:22'
+    - '80:9080'
+    - '443:9443'
+    - '22:9022'
   volumes:
-    - '/srv/gitlab/config:/etc/gitlab'
-    - '/srv/gitlab/logs:/var/log/gitlab'
-    - '/srv/gitlab/data:/var/opt/gitlab'
+    - '/mnt/cache/appdata/gitlab-ce/config:/etc/gitlab'
+    - '/mnt/cache/appdata/gitlab-ce/data:/var/log/gitlab'
+    - '/mnt/cache/appdata/gitlab-ce/log:/var/opt/gitlab'
